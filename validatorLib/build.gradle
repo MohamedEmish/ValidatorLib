@@ -44,3 +44,5 @@ dependencies {
     implementation 'io.michaelrocks:libphonenumber-android:8.12.18'
 
 }
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
