@@ -21,8 +21,6 @@
  */
 package com.amosh.validatorlib
 
-import com.amosh.validatorlib.CardInformation
-
 /**
  * The type Card validator.
  */
@@ -59,11 +57,11 @@ internal class CardValidator {
         return getTypeOfCard(validateAndGetStartingSixDigits(number))
     }
 
-    private fun countDigitsInNumber(num: Long): Int {
-        var num = num
+    private fun countDigitsInNumber(number: Long): Int {
+        var num = number
         var count = 0
         while (num > 0) {
-            num = num / 10
+            num /= 10
             count++
         }
         return count
@@ -112,20 +110,12 @@ internal class CardValidator {
     }
 
     private fun getTypeOfCard(startingSixDigits: Long): String {
-        return if (startingSixDigits > 400000 && startingSixDigits < 499999) {
-            "Visa"
-        } else if (startingSixDigits > 222100 && startingSixDigits < 272099 || (startingSixDigits > 510000
-                    && startingSixDigits < 559999)
-        ) {
-            "Mastercard"
-        } else if (startingSixDigits > 620000 && startingSixDigits < 629999) {
-            "China Union Pay"
-        } else if (startingSixDigits > 500000 && startingSixDigits < 509999 || (startingSixDigits > 560000
-                    && startingSixDigits < 699999)
-        ) {
-            "Maestro"
-        } else {
-            "Unknown"
+        return when (startingSixDigits) {
+            in 400001..499998 -> "Visa"
+            in 222101..272098, in 510001..559998 -> "Mastercard"
+            in 620001..629998 -> "China Union Pay"
+            in 500001..509998, in 560001..699998 -> "Maestro"
+            else -> "Unknown"
         }
     }
 

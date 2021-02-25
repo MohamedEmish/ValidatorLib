@@ -26,7 +26,7 @@ import java.util.regex.Pattern
 /**
  * The type Regex matcher.
  */
-class RegexMatcher {
+internal class RegexMatcher {
     /**
      * Validate string against a regex.
      *
