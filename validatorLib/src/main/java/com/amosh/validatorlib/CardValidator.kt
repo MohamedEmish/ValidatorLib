@@ -24,7 +24,8 @@ package com.amosh.validatorlib
 /**
  * The type Card validator.
  */
-internal class CardValidator {
+
+class CardValidator {
     /**
      * Validate credit card number.
      *

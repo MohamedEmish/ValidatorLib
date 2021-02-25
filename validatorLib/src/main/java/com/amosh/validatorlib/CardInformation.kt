@@ -24,7 +24,7 @@ package com.amosh.validatorlib
 /**
  * The type Card information.
  */
-internal class CardInformation
+class CardInformation
 /**
  * Instantiates a new Card information.
  *
