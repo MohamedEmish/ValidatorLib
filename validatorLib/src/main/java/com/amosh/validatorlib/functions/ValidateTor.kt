@@ -19,14 +19,17 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package com.amosh.validatorlib
+package com.amosh.validatorlib.functions
 
 import android.content.Context
 import android.graphics.Color
 import android.text.TextUtils
 import android.util.Base64
 import android.util.Patterns
-import com.amosh.validatorlib.CardInformation
+import com.amosh.validatorlib.logic.CardInformation
+import com.amosh.validatorlib.logic.CardValidator
+import com.amosh.validatorlib.logic.RegexMatcher
+import com.amosh.validatorlib.logic.RegexPresetPattern
 import io.michaelrocks.libphonenumber.android.PhoneNumberUtil
 import org.json.JSONArray
 import org.json.JSONException

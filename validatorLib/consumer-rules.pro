@@ -1,0 +1,1 @@
+-keep class com.amosh.validatorlib.functions.ValidateTor
