@@ -1,1 +1,1 @@
--keep class com.amosh.validatorlib.functions.** { *; }
+-keep class com.amosh.validatorlib.functions.ValidateTor { *; }
